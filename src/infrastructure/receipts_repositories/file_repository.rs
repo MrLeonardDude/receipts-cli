@@ -25,3 +25,18 @@ impl Repository for ReceiptRepository {
         self
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    
+    #[test]
+    fn test_save_receipt() {
+        let receipt_repo = ReceiptRepository::default();
+
+        assert_eq!(
+            receipt_repo.receipts.len(), 
+            0
+        );   
+    }
+}

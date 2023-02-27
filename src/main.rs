@@ -13,9 +13,9 @@ struct Cli {
 
 fn main() {
     let input = Cli::parse();
-
     let receipt: Receipt = serde_json::from_str(&input.receipt).unwrap();
     
     save_receipt(receipt);
-
 }
+
+
